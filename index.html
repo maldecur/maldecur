@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https: //fonts.googleapis.com/css2?family= Edu+TAS+ Beginner :wght@500 & display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Анастасія кот</title>
+</head>
+<body>
+	<div class = "cont">
+		<header>
+		 <div class="contgif">
+			<img class="gif1" src="img/kot.gif">
+			<h1 class="h1">Вибач мене будь ласка</h1>
+			<img class="gif2" src="img/kot_klas.gif">
+			<h1 class="h2">Ти кот:)</h1>
+			<img class="gif3" src="img/kiss-hot.gif">
+			</div>
+			<div class="contgif2">
+			<img class="gif4" src="img/mokry.gif">
+			<h1 class="h3">Бажаю доброго ранку</h1>
+			<img class="gif5" src="img/mavpa2.gif">
+			<h1 class="h4">І всього найкращого (っ◔◡◔)っ ❤</h1>
+			<img class="gif6" src="img/mavpaka.gif">
+		 </div>
+		</header>
+		<img src="img/serce2.png" id="serce2" class="serce2">
+		<div class = "div1">
+
+			<img src="img/serce.png" id="serce"  class = "div2">
+				<button class = "btn" id = "right"><span>Я тебе люблю</span></button>
+				
+			
+		</div>
+
+	</div>
+
+
+	<script >
+	// ЗМІННІ
+		let serce = window.document.querySelector('#serce');
+		let rightButton = window.document.querySelector('#right');
+		let rightPosition = 0;   
+		
+
+	                                                                                 
+                  
+		const btn = document.querySelector('#right');
+
+		btn.addEventListener('mousemove', (e) => {
+			const x = e.pageX - e.target.offsetLeft;
+			const y = e.pageY - e.target.offsetTop;
+			e.target.style.setProperty('--x',`${x}px`);
+			e.target.style.setProperty('--y',`${y}px`);
+		});
+		// ФУНКЦІЇ
+		 
+		  
+		  const clickHandler = () =>{
+			if (serce.style.background.Color === 'gray') {
+				serce.style.backgroundColor = 'blue';
+			} else {
+				serce.style.backgroundColor = 'gray';
+			} 
+		}
+		const rightHandler = () =>{
+			rightPosition = rightPosition + -50;
+			serce.style.top = `${rightPosition}px`;
+		}
+		serce.onclick = clickHandler;
+		rightButton.onclick = rightHandler;
+
+
+		
+	</script>
+
+</body>
+</html>
